@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to The Puppy Lovers Page! Discover beautiful puppy breeds, take our interactive puppy matchmaker quiz, and learn essential care tips for your new best friend.">
+    <title>The Puppy Lovers Page - Find Your Perfect Furry Companion</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar-header">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo" id="nav-logo">
+                <span>PuppyLove</span><span class="logo-emoji">🐾</span>
+            </a>
+            <nav class="navbar-menu" id="main-nav">
+                <a href="#showcase" class="nav-link">Showcase</a>
+                <a href="#matchmaker" class="nav-link">Matchmaker</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#care-guide" class="nav-link">Care Guide</a>
+            </nav>
+            <div class="navbar-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-tagline">🐾 A World of Paws and Play</span>
+                    <h1 class="hero-title">The Puppy Lovers Page</h1>
+                    <p class="hero-description">
+                        Every puppy brings a unique spark of joy, loyalty, and unconditional love into our lives. Explore beautiful breeds, discover your perfect canine match, and find expert advice on raising a happy, healthy pup.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#matchmaker" class="btn btn-primary" id="hero-matchmaker-btn">Find Your Match</a>
+                        <a href="#showcase" class="btn btn-secondary" id="hero-explore-btn">Explore Breeds</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/hero_puppy.png" alt="Adorable fluffy golden puppy looking up happily" class="hero-image" id="hero-puppy-img">
+                        <div class="floating-badge badge-1">
+                            <span class="badge-icon">💖</span>
+                            <span class="badge-text">100% Adorable</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <span class="badge-icon">🐶</span>
+                            <span class="badge-text">Tail Wags Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,48C1120,32,1280,32,1360,32L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+                </svg>
+            </div>
+        </section>
+        <!-- Breed Showcase Section -->
+        <section class="showcase-section" id="showcase">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">Meet Our Featured Friends</span>
+                    <h2 class="section-title">Popular Puppy Breeds</h2>
+                    <p class="section-desc">Each breed has its own unique personality, energy level, and charm. Filter the list below to learn more about them.</p>
+                </div>
+                <!-- Filter Controls -->
+                <div class="filter-controls" id="breed-filters">
+                    <button class="filter-btn active" data-filter="all">All Puppies</button>
+                    <button class="filter-btn" data-filter="active">High Energy</button>
+                    <button class="filter-btn" data-filter="calm">Calm & Gentle</button>
+                    <button class="filter-btn" data-filter="fluffy">Extra Fluffy</button>
+                </div>
+                <!-- Breed Grid -->
+                <div class="breed-grid" id="breed-grid-container">
+                    <!-- Golden Retriever Card -->
+                    <article class="breed-card" data-energy="active" data-coat="fluffy" id="card-golden">
+                        <div class="breed-card-media">
+                            <img src="assets/golden_retriever.png" alt="Golden Retriever puppy sitting in a meadow" class="breed-image">
+                            <span class="breed-badge bg-gold">Popular</span>
+                        </div>
+                        <div class="breed-card-content">
+                            <h3 class="breed-name">Golden Retriever</h3>
+                            <p class="breed-summary">Intelligent, friendly, and incredibly devoted. They make excellent family companions and active playmates.</p>
+                            <div class="breed-attributes">
+                                <span class="attribute-tag"><i class="fa-solid fa-bolt"></i> High Energy</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-brain"></i> Very Smart</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-arrows-up-down-left-right"></i> Large Size</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- French Bulldog Card -->
+                    <article class="breed-card" data-energy="calm" data-coat="smooth" id="card-frenchie">
+                        <div class="breed-card-media">
+                            <img src="assets/french_bulldog.png" alt="French Bulldog puppy on cozy rug" class="breed-image">
+                            <span class="breed-badge bg-peach">Apartment Friendly</span>
+                        </div>
+                        <div class="breed-card-content">
+                            <h3 class="breed-name">French Bulldog</h3>
+                            <p class="breed-summary">Playful, adaptable, and patient. Their compact size and easy-going nature make them perfect for city living.</p>
+                            <div class="breed-attributes">
+                                <span class="attribute-tag"><i class="fa-solid fa-couch"></i> Moderate Energy</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-child"></i> Great with Kids</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-arrows-up-down-left-right"></i> Small Size</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Samoyed Card -->
+                    <article class="breed-card" data-energy="active" data-coat="fluffy" id="card-samoyed">
+                        <div class="breed-card-media">
+                            <img src="assets/samoyed.png" alt="Fluffy white Samoyed puppy smiling in snow" class="breed-image">
+                            <span class="breed-badge bg-sky">Smiling Smile</span>
+                        </div>
+                        <div class="breed-card-content">
+                            <h3 class="breed-name">Samoyed</h3>
+                            <p class="breed-summary">Gentle, sociable, and always smiling. Their thick white double coat is as beautiful as their friendly spirit.</p>
+                            <div class="breed-attributes">
+                                <span class="attribute-tag"><i class="fa-solid fa-bolt"></i> High Energy</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-snowflake"></i> Thick Coat</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-arrows-up-down-left-right"></i> Medium Size</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Corgi Card -->
+                    <article class="breed-card" data-energy="active" data-coat="fluffy" id="card-corgi">
+                        <div class="breed-card-media">
+                            <img src="assets/corgi.png" alt="Happy Corgi puppy running on grass" class="breed-image">
+                            <span class="breed-badge bg-terracotta">Royal Favorite</span>
+                        </div>
+                        <div class="breed-card-content">
+                            <h3 class="breed-name">Pembroke Welsh Corgi</h3>
+                            <p class="breed-summary">Alert, active, and athletic. Don't let their short legs fool you—they are high-spirited and love to run.</p>
+                            <div class="breed-attributes">
+                                <span class="attribute-tag"><i class="fa-solid fa-bolt"></i> High Energy</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-shield-dog"></i> Alert Herder</span>
+                                <span class="attribute-tag"><i class="fa-solid fa-arrows-up-down-left-right"></i> Small-Medium</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Puppy Matchmaker (Interactive Section) -->
+        <section class="matchmaker-section" id="matchmaker">
+            <div class="section-container">
+                <div class="matchmaker-card-wrapper">
+                    <div class="matchmaker-info">
+                        <span class="matchmaker-tag">✨ Interactive Quiz</span>
+                        <h2 class="matchmaker-title">Puppy Matchmaker</h2>
+                        <p class="matchmaker-desc">
+                            Not sure which puppy fits your lifestyle? Tell us a bit about your living space, activity preferences, and schedule, and we will find your perfect canine soulmate!
+                        </p>
+                        <div class="matchmaker-illustration">
+                            <i class="fa-solid fa-heart-pulse heartbeat-icon"></i>
+                        </div>
+                    </div>
+                    <div class="matchmaker-quiz-container" id="matchmaker-card">
+                        <div id="quiz-intro">
+                            <h3 class="quiz-step-title">Find Your Match in 3 Simple Steps</h3>
+                            <p class="quiz-step-desc">Answer our quick questions to see which puppy matches your routine and environment.</p>
+                            <button class="btn btn-primary" id="start-quiz-btn">Start the Matchmaker</button>
+                        </div>
+                        <div id="quiz-question-container" class="hidden">
+                            <!-- Progress Bar -->
+                            <div class="quiz-progress-bar">
+                                <div class="quiz-progress-fill" id="quiz-progress"></div>
+                            </div>
+                            
+                            <!-- Question Content -->
+                            <div class="quiz-question-box">
+                                <h3 class="question-text" id="question-text">Question goes here?</h3>
+                                <div class="quiz-options" id="options-container">
+                                    <!-- Options will be injected by JavaScript -->
+                                </div>
+                            </div>
+                            <div class="quiz-navigation">
+                                <button class="btn btn-secondary hidden" id="prev-question-btn">Previous</button>
+                                <span class="quiz-step-indicator" id="step-indicator">Question 1 of 3</span>
+                            </div>
+                        </div>
+                        <!-- Quiz Result Box -->
+                        <div id="quiz-result-container" class="hidden text-center">
+                            <div class="result-celebration">🎉 It's a Match! 🎉</div>
+                            <div class="result-image-holder" id="result-image-container">
+                                <!-- Image injected by JS -->
+                            </div>
+                            <h3 class="result-breed-name" id="result-breed-name">Breed Name</h3>
+                            <p class="result-description" id="result-description">Why this breed matches you perfectly.</p>
+                            <div class="result-buttons">
+                                <button class="btn btn-primary" id="restart-quiz-btn">Take Quiz Again</button>
+                                <a href="#care-guide" class="btn btn-secondary">Read Care Guide</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">Moments of Joy</span>
+                    <h2 class="section-title">Puppy Love Gallery</h2>
+                    <p class="section-desc">A snapshot of pure happiness. Click any photo to see it in full resolution.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <img src="assets/hero_puppy.png" alt="Fluffy Golden Puppy close-up" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <img src="assets/golden_retriever.png" alt="Golden Retriever in meadow" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <img src="assets/french_bulldog.png" alt="French Bulldog puppy resting" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <img src="assets/samoyed.png" alt="Smiling Samoyed puppy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <img src="assets/corgi.png" alt="Corgi puppy running" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Care Guide Section (Accordion) -->
+        <section class="care-section" id="care-guide">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">Puppy Parenting 101</span>
+                    <h2 class="section-title">Essential Puppy Care Guide</h2>
+                    <p class="section-desc">Welcoming a new puppy is an exciting journey. Here is a quick guide on the essentials to keep them healthy, safe, and happy.</p>
+                </div>
+                <div class="accordion-container" id="care-accordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="content-nutrition" id="header-nutrition">
+                            <span class="accordion-title-wrapper">
+                                <i class="fa-solid fa-bone accordion-icon"></i>
+                                <span class="accordion-title-text">Healthy Diet & Nutrition</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content" id="content-nutrition" aria-labelledby="header-nutrition">
+                            <div class="accordion-content-inner">
+                                <p>Proper nutrition is vital during your puppy's first year of rapid growth. Keep these rules in mind:</p>
+                                <ul>
+                                    <li><strong>Puppy-Specific Food:</strong> Always feed high-quality formula formulated specifically for puppies to ensure the correct calcium-phosphorus ratio.</li>
+                                    <li><strong>Consistent Schedule:</strong> Puppies under 6 months should eat 3-4 times a day. Over 6 months, transition to twice daily.</li>
+                                    <li><strong>Fresh Water:</strong> Always keep a clean bowl of fresh water accessible to prevent dehydration.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="content-training" id="header-training">
+                            <span class="accordion-title-wrapper">
+                                <i class="fa-solid fa-graduation-cap accordion-icon"></i>
+                                <span class="accordion-title-text">Positive Reinforcement Training</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content" id="content-training" aria-labelledby="header-training">
+                            <div class="accordion-content-inner">
+                                <p>Building a strong bond and raising a well-mannered puppy starts with kind, consistent guidance:</p>
+                                <ul>
+                                    <li><strong>Reward Good Behavior:</strong> Use small, soft treats and praise immediately when they perform a desired action. Ignore or redirect unwanted behaviors rather than punishing.</li>
+                                    <li><strong>Potty Training:</strong> Establish a routine. Take your puppy out first thing in the morning, after meals, after naps, and before bed. Praise them when they go outside!</li>
+                                    <li><strong>Keep Sessions Short:</strong> Puppies have short attention spans. Keep training sessions fun and limited to 5-10 minutes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="content-health" id="header-health">
+                            <span class="accordion-title-wrapper">
+                                <i class="fa-solid fa-stethoscope accordion-icon"></i>
+                                <span class="accordion-title-text">Vaccines & Veterinary Care</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content" id="content-health" aria-labelledby="header-health">
+                            <div class="accordion-content-inner">
+                                <p>Protecting your pup's health ensures they grow up strong and disease-free:</p>
+                                <ul>
+                                    <li><strong>Vaccination Schedule:</strong> Puppies require a series of vaccinations starting at 6-8 weeks, with booster shots every 3-4 weeks until they are about 16 weeks old.</li>
+                                    <li><strong>De-worming & Flea Prevention:</strong> Consult your vet for an appropriate schedule of preventative treatments to protect against internal and external parasites.</li>
+                                    <li><strong>Microchipping:</strong> Consider microchipping your puppy. It's a quick, safe procedure that significantly increases the chances of reuniting if they ever get lost.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="content-socialization" id="header-socialization">
+                            <span class="accordion-title-wrapper">
+                                <i class="fa-solid fa-users accordion-icon"></i>
+                                <span class="accordion-title-text">Early Socialization</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content" id="content-socialization" aria-labelledby="header-socialization">
+                            <div class="accordion-content-inner">
+                                <p>Early socialization helps prevent future fear, anxiety, and aggression, shaping a confident adult dog:</p>
+                                <ul>
+                                    <li><strong>The Golden Window:</strong> The most critical socialization period is between 3 and 16 weeks of age.</li>
+                                    <li><strong>Gradual Exposure:</strong> Gently introduce them to a variety of people (different ages, sizes, wearing hats/coats), novel sounds (vacuum cleaner, doorbells, passing cars), and safe environments.</li>
+                                    <li><strong>Vaccines First:</strong> Ensure they are sufficiently vaccinated before letting them socialize with unknown dogs or walk in high-traffic public parks.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter Sign-Up (Glassmorphism design) -->
+        <section class="newsletter-section" id="newsletter">
+            <div class="newsletter-container">
+                <div class="newsletter-card">
+                    <div class="newsletter-text">
+                        <h2 class="newsletter-title">Stay Connected with Puppy Love</h2>
+                        <p class="newsletter-desc">Get the cutest puppy photos, training tips, and breed guides delivered straight to your inbox weekly.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Puppy Love! 🐾'); this.reset();">
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="newsletter-email" placeholder="Your email address" required aria-label="Email Address">
+                            <button type="submit" class="btn btn-primary btn-submit" id="newsletter-submit-btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <a href="#" class="footer-logo">
+                    <span>PuppyLove</span>🐾
+                </a>
+                <p class="footer-tagline">Connecting hearts with wagging tails.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#showcase">Breeds</a>
+                <a href="#matchmaker">Quiz</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#care-guide">Care Guide</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copyright" id="copyright-text">&copy; 2026 PuppyLove. Built with 💖 for puppy lovers everywhere.</p>
+        </div>
+    </footer>
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal hidden" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image gallery preview">
+        <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close preview">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev-btn" aria-label="Previous image">&#10094;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightbox-image-element">
+            <div class="lightbox-caption" id="lightbox-caption-element">Caption text</div>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next-btn" aria-label="Next image">&#10095;</button>
+    </div>
+    <!-- Script Entry -->
+    <script src="script.js"></script>
+</body>
+</html>
